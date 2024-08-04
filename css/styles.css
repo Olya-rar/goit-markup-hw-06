@@ -85,7 +85,6 @@ button {
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
@@ -339,12 +338,13 @@ button {
   max-width: 320px;
   margin: 0 auto;
   background-color: #ffffff;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 @media screen and (min-width: 768px) {
   .features {
     max-width: 768px;
-    margin: 0 auto;
   }
 }
 
@@ -352,6 +352,8 @@ button {
   .features {
     max-width: 1158px;
     background-color: #ffffff;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
@@ -375,7 +377,7 @@ button {
     gap: 72px 24px;
   }
 
-  .afeatures-item {
+  .features-item {
     width: calc((100% - 24px) / 2);
   }
 }
@@ -464,13 +466,15 @@ button {
 
 .team {
   background-color: #f4f4fd;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .team {
   max-width: 320px;
   margin: 0 auto;
-  padding-left: 28px;
-  padding-right: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -487,18 +491,19 @@ button {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
 .team-title {
-  font-weight: 700;
+  margin-bottom: 72px;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 111%;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #2e2f42;
   text-transform: capitalize;
-  margin-bottom: 72px;
+  color: #2e2f42;
 }
 
 .team-list {
@@ -591,6 +596,11 @@ button {
 .team-link-icon:hover,
 .team-link-icon:focus {
   background-color: #404bbf;
+}
+
+.portfolio {
+  padding-bottom: 72px;
+  padding-top: 96px;
 }
 
 .portfolio-title {
@@ -821,12 +831,12 @@ button {
   gap: 16px;
 }
 
-.sfooter-item-icon {
+.footer-item-icon {
   width: 40px;
   height: 40px;
 }
 
-.footer-social-icon {
+.footer-link-icon {
   display: flex;
   width: 100%;
   height: 100%;
@@ -838,8 +848,8 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-social-icon:hover,
-.footer-social-icon:focus {
+.footer-link-icon:hover,
+.footer-link-icon:focus {
   background-color: #31d0aa;
 }
 
