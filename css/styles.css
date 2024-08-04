@@ -747,7 +747,7 @@ button {
   }
 }
 
-.fcontainer-one {
+.container-one {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1153,10 +1153,6 @@ button {
 
 .form-textarea:focus {
   border-color: #4d5ae5;
-}
-
-.form-label-com {
-  margin-bottom: 16px;
 }
 
 .form-textarea::placeholder {
