@@ -52,6 +52,8 @@ button {
   max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -213,7 +215,6 @@ button {
 .name {
   background: #2e2f42;
   padding: 72px 0;
-  max-width: 320px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -240,7 +241,6 @@ button {
 @media screen and (min-width: 768px) {
   .name {
     padding: 112px 0;
-    max-width: 768px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -264,7 +264,6 @@ button {
 @media screen and (min-width: 1158px) {
   .name {
     padding: 188px 0;
-    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -335,23 +334,14 @@ button {
 }
 
 .features {
-  max-width: 320px;
   margin: 0 auto;
   background-color: #ffffff;
   padding-top: 96px;
   padding-bottom: 96px;
 }
 
-@media screen and (min-width: 768px) {
-  .features {
-    max-width: 768px;
-  }
-}
-
 @media screen and (min-width: 1158px) {
   .features {
-    max-width: 1158px;
-    background-color: #ffffff;
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -468,29 +458,12 @@ button {
   background-color: #f4f4fd;
   padding-top: 96px;
   padding-bottom: 96px;
-}
-
-.team {
-  max-width: 320px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-@media screen and (min-width: 768px) {
-  .team {
-    max-width: 768px;
-    padding-left: 108px;
-    padding-right: 108px;
-  }
 }
 
 @media screen and (min-width: 1158px) {
   .team {
-    max-width: 1158px;
     margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
     padding-top: 120px;
     padding-bottom: 120px;
   }
@@ -508,11 +481,14 @@ button {
 
 .team-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 72px;
 }
 
 .team-item {
+  width: 264px;
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
   overflow: hidden;
@@ -525,20 +501,12 @@ button {
   .team-list {
     gap: 64px 24px;
   }
-
-  .team-item {
-    width: calc((100% - 64px) / 2);
-  }
 }
 
 @media screen and (min-width: 1158px) {
   .team-list {
     gap: 24px;
     flex-wrap: nowrap;
-  }
-
-  .team-item {
-    width: calc((100% - 24px) / 4);
   }
 }
 
@@ -707,6 +675,10 @@ button {
   border-top: none;
 }
 
+.portfolio-subtitle {
+  margin-bottom: 8px;
+}
+
 .footer {
   background: #2e2f42;
   max-width: 100%;
@@ -733,25 +705,30 @@ button {
 .footer-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
   .footer-container {
     align-items: baseline;
+    padding-left: 108px;
+    justify-content: start;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .footer-container {
-    flex-wrap: nowrap;
+    justify-content: center;
+    padding-left: 16px;
   }
 }
 
 .container-one {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
   width: 288px;
   height: 112px;
   margin-bottom: 72px;
@@ -760,14 +737,13 @@ button {
 @media screen and (min-width: 768px) {
   .container-one {
     width: 264px;
-    justify-content: flex-start;
+    align-items: start;
     margin-right: 24px;
-    margin-left: 108px;
   }
 }
 
 @media screen and (min-width: 1158px) {
-  .fcontainer-one {
+  .container-one {
     margin-right: 120px;
     margin-left: 0;
     margin-bottom: 0;
@@ -775,14 +751,19 @@ button {
 }
 
 .footer-logo {
-  display: inline-block;
-  margin-bottom: 16px;
+  align-self: center;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-logo {
+    align-self: start;
+  }
 }
 
 .footer-logo-studio {
@@ -794,6 +775,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  justify-content: start;
 }
 
 .container-two {
@@ -802,17 +784,18 @@ button {
   justify-content: center;
   align-items: center;
   margin-bottom: 72px;
+  width: 208px;
 }
 
 @media screen and (min-width: 768px) {
   .container-two {
     display: inline-block;
-    margin-right: 80px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .container-two {
+    margin-right: 80px;
     margin-bottom: 0;
   }
 }
@@ -867,14 +850,11 @@ button {
     justify-content: flex-start;
     max-width: 453px;
     min-height: 80px;
-    margin-left: 108px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .footer-form {
-    display: inline-block;
-    align-items: center;
     height: 40px;
     margin-left: 0;
   }
@@ -993,7 +973,7 @@ button {
   transform: translate(-50%, -50%);
   border-radius: 4px;
   width: 288px;
-  min-height: 623px;
+  height: 623px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
@@ -1161,17 +1141,14 @@ button {
 
 .checkbox-contacts {
   display: flex;
-  gap: 8px;
+  gap: 7.5px;
   margin-bottom: 18px;
 }
 
 .form-checkbox {
-  display: flex;
-  align-items: center;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
-  letter-spacing: 0.04em;
   color: #8e8f99;
 }
 
